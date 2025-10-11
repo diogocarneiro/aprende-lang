@@ -1,0 +1,20 @@
+mostra "Olá Mundo da programação!"
+
+funcao quadrado(numero)
+    definir resultado calcular numero * numero
+    mostra "O quadrado de " numero " é " resultado
+    retorna resultado
+fim
+
+funcao soma(a, b)
+    definir resultado calcular a + b
+    mostra "A soma de " a " + " b " é " resultado
+    retorna resultado
+fim
+
+
+
+// Chamar a função diretamente:
+quadrado 5
+
+soma 4 6

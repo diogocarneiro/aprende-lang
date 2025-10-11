@@ -6,7 +6,7 @@ Windows Registry Editor Version 5.00
 
 [HKEY_CLASSES_ROOT\AprendeLangFile]
 @="Ficheiro Linguagem Aprende"
-"FriendlyTypeName"="Ficheiro de código Aprende"
+"FriendlyTypeName"="Ficheiro de codigo Aprende"
 
 [HKEY_CLASSES_ROOT\AprendeLangFile\DefaultIcon]
 @="C:\\Developer\\Projects\\Aprende-lang\\assets\\aprende-icon.ico"

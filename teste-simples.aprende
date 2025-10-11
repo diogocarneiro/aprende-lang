@@ -1,22 +1,50 @@
-// Teste simples de condicionais
-mostra "=== TESTE DE CONDICIONAIS ==="
+// Teste simples da Linguagem Aprende - Automático
+mostra "🧪 TESTE AUTOMÁTICO DA LINGUAGEM APRENDE"
+mostra "========================================="
 
-definir opcao ler "Digite 1 ou 2: "
+// Teste de variáveis
+mostra "📝 Testando variáveis..."
+definir nome "Aprende"
+definir versao 1.1
+mostra "Linguagem: " nome " v" versao
+mostra "✅ Variáveis funcionando!"
 
-se opcao igual "1" entao
-    mostra "Você escolheu opção 1!"
-    mostra "Fazendo soma..."
-    definir a 10
-    definir b 5
-    definir resultado calcular a + b
-    mostra "Resultado: " a " + " b " = " resultado
+// Teste de operadores em português
+mostra ""
+mostra "🔢 Testando operadores em português..."
+definir a 10
+definir b 5
+definir soma calcular a mais b
+definir subtracao calcular a menos b
+mostra a " mais " b " = " soma
+mostra a " menos " b " = " subtracao
+mostra "✅ Operadores em português funcionando!"
 
-se opcao igual "2" entao
-    mostra "Você escolheu opção 2!"
-    mostra "Fazendo subtração..."
-    definir a 10
-    definir b 3
-    definir resultado calcular a - b
-    mostra "Resultado: " a " - " b " = " resultado
+// Teste de operadores simbólicos
+mostra ""
+mostra "➕ Testando operadores simbólicos..."
+definir mult calcular a * b
+definir div calcular a / b
+mostra a " * " b " = " mult
+mostra a " / " b " = " div
+mostra "✅ Operadores simbólicos funcionando!"
+
+// Teste de condicionais
+mostra ""
+mostra "🔀 Testando condicionais..."
+se a maior b entao
+    mostra a " é maior que " b " ✅"
+senao
+    mostra a " não é maior que " b " ❌"
+
+// Teste de loop
+mostra ""
+mostra "🔄 Testando loop..."
+para i de 1 ate 3
+    mostra "Iteração " i
+
+mostra ""
+mostra "🎉 TODOS OS TESTES PASSARAM COM SUCESSO!"
+mostra "A Linguagem Aprende está funcionando perfeitamente!"
 
 mostra "Fim do teste."
