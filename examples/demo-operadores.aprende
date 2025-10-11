@@ -1,0 +1,41 @@
+// Teste simples de operadores - ambas as formas funcionam!
+
+mostra "=== Demonstração de Operadores ==="
+
+// Definir variáveis
+definir a 15
+definir b 4
+
+mostra ""
+mostra "Usando operadores em português:"
+
+// Calcular usando palavras em português
+definir soma calcular a mais b
+definir diferenca calcular a menos b
+definir produto calcular a vezes b
+definir divisao calcular a dividido b
+
+mostra "15 mais 4 = " soma
+mostra "15 menos 4 = " diferenca
+mostra "15 vezes 4 = " produto
+mostra "15 dividido 4 = " divisao
+
+mostra ""
+mostra "Usando símbolos matemáticos:"
+
+// Calcular usando símbolos matemáticos
+definir soma2 calcular a + b
+definir diferenca2 calcular a - b
+definir produto2 calcular a * b
+definir divisao2 calcular a / b
+
+mostra "15 + 4 = " soma2
+mostra "15 - 4 = " diferenca2
+mostra "15 * 4 = " produto2
+mostra "15 / 4 = " divisao2
+
+mostra ""
+mostra "Ambas as formas dão o mesmo resultado!"
+
+se soma igual soma2 entao
+    mostra "✓ Confirmado: " soma " = " soma2

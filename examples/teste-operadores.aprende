@@ -1,0 +1,26 @@
+// Teste simples de operadores
+
+mostra "=== Teste de Operadores ==="
+
+// Definir números
+definir a 10
+definir b 3
+
+// Testar operadores em português
+mostra "Operadores em português:"
+mostra a " mais " b " = " calcular a mais b
+mostra a " menos " b " = " calcular a menos b  
+mostra a " vezes " b " = " calcular a vezes b
+mostra a " dividido " b " = " calcular a dividido b
+
+mostra ""
+
+// Testar operadores com símbolos
+mostra "Operadores com símbolos:"
+mostra a " + " b " = " calcular a + b
+mostra a " - " b " = " calcular a - b
+mostra a " * " b " = " calcular a * b
+mostra a " / " b " = " calcular a / b
+
+mostra ""
+mostra "Ambas as formas funcionam perfeitamente!"

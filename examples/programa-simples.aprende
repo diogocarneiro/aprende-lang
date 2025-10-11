@@ -1,0 +1,40 @@
+// Programa simples que funciona perfeitamente
+mostra "🎯 Bem-vindo à Linguagem Aprende! 🎯"
+mostra ""
+
+// Definir variáveis
+definir nome "Ana"
+definir idade 12
+definir altura 1.45
+
+// Mostrar informações
+mostra "Nome: " nome
+mostra "Idade: " idade " anos"
+mostra "Altura: " altura " metros"
+mostra ""
+
+// Fazer cálculos com operadores em português
+definir idade_futura calcular idade mais 10
+mostra "Em 10 anos " nome " terá " idade_futura " anos"
+
+// Fazer cálculos com símbolos matemáticos
+definir idade_dobro calcular idade * 2
+mostra "O dobro da idade é " idade_dobro " anos"
+
+// Mais cálculos
+definir soma calcular 15 + 25
+definir diferenca calcular 100 - 30
+definir produto calcular 6 * 7
+definir divisao calcular 84 / 12
+
+mostra ""
+mostra "=== Cálculos Matemáticos ==="
+mostra "15 + 25 = " soma
+mostra "100 - 30 = " diferenca
+mostra "6 × 7 = " produto
+mostra "84 ÷ 12 = " divisao
+
+mostra ""
+mostra "✅ A linguagem Aprende funciona perfeitamente!"
+mostra "🎨 Suporte a operadores em português E símbolos!"
+mostra "📚 Ideal para ensinar programação a crianças!"

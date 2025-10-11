@@ -1,0 +1,75 @@
+// Exemplo completo para testar sintaxe da extensão VS Code
+// Este ficheiro deve mostrar todas as cores e funcionalidades
+
+mostra "🎨 TESTE COMPLETO DE SINTAXE - APRENDE 🎨"
+mostra ""
+
+// === VARIÁVEIS E NÚMEROS ===
+definir nome "João"
+definir idade 12
+definir altura 1.45
+definir ativo verdadeiro
+definir nulo nada
+
+// === OPERADORES EM PORTUGUÊS ===
+definir soma calcular idade mais 5
+definir produto calcular idade vezes 2
+definir comparacao calcular idade maior 10
+
+// === OPERADORES COM SÍMBOLOS ===
+definir soma2 calcular idade + 5
+definir produto2 calcular idade * 2
+definir comparacao2 calcular idade > 10
+
+// === ESTRUTURAS DE CONTROLO ===
+se idade maior 10 entao
+    mostra "És pré-adolescente!"
+senao
+    mostra "És criança!"
+
+// Com símbolos também funciona
+se idade >= 12 entao
+    mostra "Quase adolescente!"
+
+// === LOOPS ===
+para i de 1 ate 3
+    mostra "Contagem: " i
+
+// === EXPRESSÕES COMPLEXAS ===
+definir resultado calcular (idade + 5) * 2 - 1
+definir logico calcular (idade > 10) e (altura > 1.0)
+
+// === STRINGS E CONCATENAÇÃO ===
+mostra "Olá " nome ", tens " idade " anos"
+mostra 'Também funciona com aspas simples'
+
+// === COMPARAÇÕES VÁRIAS ===
+se nome igual "João" entao
+    mostra "Nome correto!"
+
+se idade != 15 entao
+    mostra "Não tens 15 anos"
+
+se altura <= 2.0 entao
+    mostra "Altura normal"
+
+// === LÓGICA ===
+se (idade > 5) e (idade < 18) entao
+    mostra "És menor de idade"
+
+se (nome == "João") ou (nome == "Maria") entao
+    mostra "Nome comum"
+
+se nao (idade < 10) entao
+    mostra "Tens pelo menos 10 anos"
+
+// === COMENTÁRIOS DIFERENTES ===
+// Comentário de linha simples
+// Outro comentário para testar
+
+mostra ""
+mostra "✅ Se vês todas as cores, a sintaxe funciona perfeitamente!"
+mostra "🎨 Palavras-chave devem estar roxas/azuis"
+mostra "💚 Strings e comentários devem estar verdes"  
+mostra "🟨 Números devem estar amarelos"
+mostra "🔵 Operadores devem estar destacados"

@@ -1,0 +1,106 @@
+{
+    "name": "aprende-lang",
+    "displayName": "Aprende Language Support",
+    "description": "Suporte completo para a linguagem de programação Aprende - Uma linguagem em português para crianças e iniciantes aprenderem programação de forma intuitiva",
+    "version": "1.1.1",
+    "publisher": "diogocarneiro",
+    "author": {
+        "name": "Diogo Carneiro",
+        "email": "diogoncarneiro@outlook.com"
+    },
+    "icon": "icons/aprende-icon.ico",
+    "engines": {
+        "vscode": "^1.80.0"
+    },
+    "categories": [
+        "Programming Languages",
+        "Education",
+        "Other"
+    ],
+    "keywords": [
+        "aprende",
+        "português",
+        "portuguese",
+        "crianças",
+        "children",
+        "kids",
+        "iniciantes",
+        "beginners",
+        "educação",
+        "education",
+        "programming",
+        "aprendizagem",
+        "learning",
+        "syntax",
+        "highlighting"
+    ],
+    "galleryBanner": {
+        "color": "#2E7D32",
+        "theme": "dark"
+    },
+    "contributes": {
+        "languages": [
+            {
+                "id": "aprende",
+                "aliases": [
+                    "Aprende",
+                    "aprende"
+                ],
+                "extensions": [
+                    ".aprende"
+                ],
+                "configuration": "./language-configuration.json",
+                "icon": {
+                    "light": "./icons/aprende-icon.ico",
+                    "dark": "./icons/aprende-icon.ico"
+                }
+            }
+        ],
+        "grammars": [
+            {
+                "language": "aprende",
+                "scopeName": "source.aprende",
+                "path": "./syntaxes/aprende.tmLanguage.json"
+            }
+        ],
+        "themes": [
+            {
+                "label": "Aprende Kids Theme",
+                "uiTheme": "vs",
+                "path": "./themes/aprende-kids-theme.json"
+            },
+            {
+                "label": "Aprende Dark Theme",
+                "uiTheme": "vs-dark",
+                "path": "./themes/aprende-dark-theme.json"
+            },
+            {
+                "label": "Aprende Palenight Theme",
+                "uiTheme": "vs-dark",
+                "path": "./themes/aprende-palenight-theme.json"
+            }
+        ],
+        "snippets": [
+            {
+                "language": "aprende",
+                "path": "./snippets/aprende.json"
+            }
+        ],
+        "configurationDefaults": {
+            "[aprende]": {
+                "editor.insertSpaces": true,
+                "editor.tabSize": 4,
+                "editor.autoIndent": "full"
+            }
+        }
+    },
+    "homepage": "https://github.com/diogocarneiro/aprende-lang#readme",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/diogocarneiro/aprende-lang.git"
+    },
+    "bugs": {
+        "url": "https://github.com/diogocarneiro/aprende-lang/issues"
+    },
+    "license": "MIT"
+}

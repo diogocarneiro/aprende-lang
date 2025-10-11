@@ -1,0 +1,73 @@
+// Exemplo de funções na linguagem Aprende
+// Este arquivo demonstra como criar e usar funções
+
+mostra "=== Exemplo de Funções em Aprende ==="
+mostra ""
+
+// Função simples sem parâmetros
+funcao saudar()
+    mostra "Olá! Bem-vindo à linguagem Aprende!"
+    mostra "Estas são funções personalizadas!"
+fim
+
+// Função com um parâmetro
+funcao dizer_ola(nome)
+    mostra "Olá " nome "! Como estás?"
+fim
+
+// Função com dois parâmetros
+funcao somar(a, b)
+    definir resultado calcular a + b
+    mostra a " + " b " = " resultado
+    retorna resultado
+fim
+
+// Função para calcular área de retângulo
+funcao area_retangulo(largura, altura)
+    definir area calcular largura * altura
+    mostra "Área do retângulo: " largura " x " altura " = " area
+    retorna area
+fim
+
+// Função para contar até um número
+funcao contar_ate(numero)
+    mostra "Vou contar até " numero ":"
+    para i de 1 ate numero
+        mostra "Contagem: " i
+fim
+
+// Função com condições
+funcao verificar_idade(idade)
+    se idade maior_igual 18 entao
+        mostra "És adulto!"
+    senao
+        mostra "És menor de idade!"
+fim
+
+mostra "--- Testando as funções ---"
+mostra ""
+
+// Chamando funções
+saudar
+
+mostra ""
+dizer_ola "Maria"
+dizer_ola "João"
+
+mostra ""
+somar 5 3
+somar 10 7
+
+mostra ""
+area_retangulo 4 5
+area_retangulo 10 2
+
+mostra ""
+contar_ate 5
+
+mostra ""
+verificar_idade 16
+verificar_idade 20
+
+mostra ""
+mostra "✅ Exemplo de funções completo!"

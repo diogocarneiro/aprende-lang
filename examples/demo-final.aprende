@@ -1,0 +1,62 @@
+// Demonstração dos novos operadores da linguagem Aprende
+// Agora suporta tanto português quanto símbolos matemáticos!
+
+mostra "🎯 LINGUAGEM APRENDE - OPERADORES DUPLOS 🎯"
+mostra ""
+
+// Definir números para teste
+definir numero1 12
+definir numero2 5
+
+mostra "Números para teste:"
+mostra "numero1 = " numero1
+mostra "numero2 = " numero2
+mostra ""
+
+// === OPERADORES EM PORTUGUÊS ===
+mostra "📝 OPERADORES EM PORTUGUÊS:"
+
+definir soma_pt calcular numero1 mais numero2
+definir diff_pt calcular numero1 menos numero2
+definir mult_pt calcular numero1 vezes numero2
+definir div_pt calcular numero1 dividido numero2
+
+mostra numero1 " mais " numero2 " = " soma_pt
+mostra numero1 " menos " numero2 " = " diff_pt
+mostra numero1 " vezes " numero2 " = " mult_pt
+mostra numero1 " dividido " numero2 " = " div_pt
+
+mostra ""
+
+// === OPERADORES COM SÍMBOLOS ===
+mostra "🔢 OPERADORES COM SÍMBOLOS:"
+
+definir soma_sym calcular numero1 + numero2
+definir diff_sym calcular numero1 - numero2
+definir mult_sym calcular numero1 * numero2
+definir div_sym calcular numero1 / numero2
+
+mostra numero1 " + " numero2 " = " soma_sym
+mostra numero1 " - " numero2 " = " diff_sym
+mostra numero1 " * " numero2 " = " mult_sym
+mostra numero1 " / " numero2 " = " div_sym
+
+mostra ""
+
+// === VERIFICAÇÃO ===
+mostra "✅ VERIFICAÇÃO (ambas as formas devem dar o mesmo resultado):"
+mostra "Soma: " soma_pt " = " soma_sym
+mostra "Diferença: " diff_pt " = " diff_sym
+mostra "Multiplicação: " mult_pt " = " mult_sym
+mostra "Divisão: " div_pt " = " div_sym
+
+mostra ""
+mostra "🎉 SUCESSO! A linguagem Aprende agora suporta:"
+mostra "  • Operadores em português (mais, menos, vezes, dividido)"
+mostra "  • Símbolos matemáticos tradicionais (+, -, *, /)"
+mostra "  • Ambas as formas funcionam perfeitamente!"
+
+mostra ""
+mostra "Agora é ainda mais fácil para crianças aprenderem:"
+mostra "  - Começar com português (mais intuitivo)"
+mostra "  - Evoluir para símbolos (mais rápido)"

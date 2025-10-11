@@ -1,0 +1,128 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "Aprende",
+    "scopeName": "source.aprende",
+    "patterns": [
+        {
+            "include": "#comments"
+        },
+        {
+            "include": "#keywords"
+        },
+        {
+            "include": "#strings"
+        },
+        {
+            "include": "#numbers"
+        },
+        {
+            "include": "#operators"
+        },
+        {
+            "include": "#booleans"
+        },
+        {
+            "include": "#variables"
+        }
+    ],
+    "repository": {
+        "comments": {
+            "patterns": [
+                {
+                    "name": "comment.line.double-slash.aprende",
+                    "match": "//.*$"
+                }
+            ]
+        },
+        "keywords": {
+            "patterns": [
+                {
+                    "name": "keyword.control.aprende",
+                    "match": "\\b(se|entao|senao|para|de|ate|enquanto|repetir|vezes|fim|parar|continuar|funcao|retorna)\\b"
+                },
+                {
+                    "name": "keyword.other.aprende",
+                    "match": "\\b(mostra|ler|definir|calcular|esperar|limpar|arredondar|absoluto|tamanho|maiuscula|minuscula)\\b"
+                }
+            ]
+        },
+        "strings": {
+            "patterns": [
+                {
+                    "name": "string.quoted.double.aprende",
+                    "begin": "\"",
+                    "end": "\"",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.aprende",
+                            "match": "\\\\."
+                        }
+                    ]
+                },
+                {
+                    "name": "string.quoted.single.aprende",
+                    "begin": "'",
+                    "end": "'",
+                    "patterns": [
+                        {
+                            "name": "constant.character.escape.aprende",
+                            "match": "\\\\."
+                        }
+                    ]
+                }
+            ]
+        },
+        "numbers": {
+            "patterns": [
+                {
+                    "name": "constant.numeric.decimal.aprende",
+                    "match": "\\b\\d+\\.\\d+\\b"
+                },
+                {
+                    "name": "constant.numeric.integer.aprende",
+                    "match": "\\b\\d+\\b"
+                }
+            ]
+        },
+        "operators": {
+            "patterns": [
+                {
+                    "name": "keyword.operator.arithmetic.aprende",
+                    "match": "\\b(mais|menos|vezes|dividido|resto|potencia)\\b"
+                },
+                {
+                    "name": "keyword.operator.arithmetic.symbol.aprende",
+                    "match": "[+\\-*/]|\\*\\*|%"
+                },
+                {
+                    "name": "keyword.operator.comparison.aprende",
+                    "match": "\\b(igual|diferente|maior|menor|maior_igual|menor_igual)\\b"
+                },
+                {
+                    "name": "keyword.operator.comparison.symbol.aprende",
+                    "match": "==|!=|>=|<=|>|<"
+                },
+                {
+                    "name": "keyword.operator.logical.aprende",
+                    "match": "\\b(e|ou|nao)\\b"
+                }
+            ]
+        },
+        "booleans": {
+            "patterns": [
+                {
+                    "name": "constant.language.boolean.aprende",
+                    "match": "\\b(verdadeiro|falso|nada)\\b"
+                }
+            ]
+        },
+        "variables": {
+            "patterns": [
+                {
+                    "name": "variable.other.aprende",
+                    "match": "\\b[a-zA-Z_àáâãçéêíóôõú][a-zA-Z0-9_àáâãçéêíóôõú]*\\b"
+                }
+            ]
+        }
+    }
+}

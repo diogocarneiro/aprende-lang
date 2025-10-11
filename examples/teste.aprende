@@ -1,0 +1,8 @@
+// Este código deve aparecer colorido!
+mostra "Olá mundo da programação!"
+
+definir idade 10
+definir idade_futura calcular idade + 5
+
+se idade_futura > 12 entao
+    mostra "Serás adolescente!"

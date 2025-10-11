@@ -1,0 +1,145 @@
+{
+    "name": "Aprende Palenight Theme",
+    "type": "dark",
+    "colors": {
+        "editor.background": "#292D3E",
+        "editor.foreground": "#BFC7D5",
+        "editorLineNumber.foreground": "#676E95",
+        "editorLineNumber.activeForeground": "#FFCB6B",
+        "editor.selectionBackground": "#474260",
+        "editor.lineHighlightBackground": "#2F334D",
+        "editorCursor.foreground": "#FFCB6B",
+        "editor.findMatchBackground": "#F78C6C80",
+        "editor.findMatchHighlightBackground": "#F78C6C40",
+        "editorIndentGuide.background": "#37415180",
+        "editorIndentGuide.activeBackground": "#676E95",
+        "sideBar.background": "#252837",
+        "sideBar.foreground": "#BFC7D5",
+        "sideBarSectionHeader.background": "#292D3E",
+        "sideBarSectionHeader.foreground": "#BFC7D5",
+        "activityBar.background": "#1E1E2F",
+        "activityBar.foreground": "#BFC7D5",
+        "activityBar.activeBorder": "#FFCB6B",
+        "statusBar.background": "#1E1E2F",
+        "statusBar.foreground": "#BFC7D5",
+        "tab.activeBackground": "#292D3E",
+        "tab.inactiveBackground": "#252837",
+        "tab.activeForeground": "#BFC7D5",
+        "tab.inactiveForeground": "#676E95",
+        "tab.border": "#1E1E2F",
+        "panel.background": "#252837",
+        "panel.border": "#1E1E2F",
+        "terminal.background": "#292D3E",
+        "terminal.foreground": "#BFC7D5",
+        "titleBar.activeBackground": "#1E1E2F",
+        "titleBar.activeForeground": "#BFC7D5",
+        "editorWidget.background": "#252837",
+        "dropdown.background": "#252837",
+        "input.background": "#252837",
+        "button.background": "#676E95",
+        "button.foreground": "#BFC7D5",
+        "button.hoverBackground": "#717CB4"
+    },
+    "tokenColors": [
+        {
+            "name": "Comments",
+            "scope": "comment",
+            "settings": {
+                "foreground": "#676E95",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "Keywords Control (se, entao, para, enquanto)",
+            "scope": "keyword.control.aprende",
+            "settings": {
+                "foreground": "#C792EA",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Built-in functions (mostra, ler, definir)",
+            "scope": "keyword.other.aprende",
+            "settings": {
+                "foreground": "#82AAFF",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Strings",
+            "scope": "string",
+            "settings": {
+                "foreground": "#C3E88D"
+            }
+        },
+        {
+            "name": "String quotes",
+            "scope": "punctuation.definition.string",
+            "settings": {
+                "foreground": "#C3E88D"
+            }
+        },
+        {
+            "name": "Numbers",
+            "scope": "constant.numeric",
+            "settings": {
+                "foreground": "#F78C6C"
+            }
+        },
+        {
+            "name": "Booleans (verdadeiro, falso, nada)",
+            "scope": "constant.language.boolean.aprende",
+            "settings": {
+                "foreground": "#FF5370",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Operators Arithmetic Portuguese (mais, menos, vezes)",
+            "scope": "keyword.operator.arithmetic.aprende",
+            "settings": {
+                "foreground": "#89DDFF",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Operators Arithmetic Symbols (+, -, *, /)",
+            "scope": "keyword.operator.arithmetic.symbol.aprende",
+            "settings": {
+                "foreground": "#89DDFF",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Operators Comparison Portuguese (igual, maior, menor)",
+            "scope": "keyword.operator.comparison.aprende",
+            "settings": {
+                "foreground": "#89DDFF",
+                "fontStyle": ""
+            }
+        },
+        {
+            "name": "Operators Comparison Symbols (==, >, <, !=)",
+            "scope": "keyword.operator.comparison.symbol.aprende",
+            "settings": {
+                "foreground": "#89DDFF",
+                "fontStyle": ""
+            }
+        },
+        {
+            "name": "Operators Logical (e, ou, nao)",
+            "scope": "keyword.operator.logical.aprende",
+            "settings": {
+                "foreground": "#C792EA",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "Variables",
+            "scope": "variable.other.aprende",
+            "settings": {
+                "foreground": "#EEFFFF"
+            }
+        }
+    ]
+}

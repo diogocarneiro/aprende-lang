@@ -1,0 +1,20 @@
+// Teste de função simples
+mostra "=== Teste de Função Simples ==="
+
+
+funcao quadrado(numero)
+    definir resultado calcular numero * numero
+    mostra "O quadrado de " numero " é " resultado
+    retorna resultado
+fim
+
+
+
+// Chamar a função diretamente:
+quadrado 5
+
+mostra "✅ Função quadrado funciona!"
+
+// Chamar a função diretamente:
+definir resultado_soma calcular 7 / 8
+mostra "✅Resultado da soma retornado: " resultado_soma

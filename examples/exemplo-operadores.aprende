@@ -1,0 +1,74 @@
+// Exemplo demonstrando operadores em português e símbolos
+// Calculadora flexível - usa ambas as formas!
+
+mostra "=== Calculadora Aprende - Modo Duplo ==="
+mostra "Podes usar tanto português quanto símbolos matemáticos!"
+mostra ""
+
+// Exemplos com operadores em português
+mostra "--- Usando operadores em português ---"
+definir a 10
+definir b 3
+
+definir soma calcular a mais b
+definir subtracao calcular a menos b  
+definir multiplicacao calcular a vezes b
+definir divisao calcular a dividido b
+
+mostra a " mais " b " = " soma
+mostra a " menos " b " = " subtracao
+mostra a " vezes " b " = " multiplicacao
+mostra a " dividido " b " = " divisao
+mostra ""
+
+// Exemplos com símbolos matemáticos
+mostra "--- Usando símbolos matemáticos ---"
+definir soma2 calcular a + b
+definir subtracao2 calcular a - b
+definir multiplicacao2 calcular a * b
+definir divisao2 calcular a / b
+
+mostra a " + " b " = " soma2
+mostra a " - " b " = " subtracao2
+mostra a " * " b " = " multiplicacao2
+mostra a " / " b " = " divisao2
+mostra ""
+
+// Demonstrar que dá o mesmo resultado
+mostra "--- Verificação: ambas as formas dão o mesmo resultado ---"
+se soma igual soma2 entao
+    mostra "✓ Soma: " soma " = " soma2
+    
+se subtracao == subtracao2 entao  // Usando símbolo de comparação
+    mostra "✓ Subtração: " subtracao " = " subtracao2
+
+se multiplicacao igual multiplicacao2 entao
+    mostra "✓ Multiplicação: " multiplicacao " = " multiplicacao2
+    
+se divisao == divisao2 entao
+    mostra "✓ Divisão: " divisao " = " divisao2
+
+mostra ""
+
+// Exemplo prático: calculadora interativa
+mostra "--- Calculadora Interativa ---"
+definir num1 ler "Digite o primeiro número: "
+definir num2 ler "Digite o segundo número: "
+
+mostra ""
+mostra "Resultados usando operadores em português:"
+mostra num1 " mais " num2 " = " calcular num1 mais num2
+mostra num1 " menos " num2 " = " calcular num1 menos num2
+mostra num1 " vezes " num2 " = " calcular num1 vezes num2
+mostra num1 " dividido " num2 " = " calcular num1 dividido num2
+
+mostra ""
+mostra "Resultados usando símbolos matemáticos:"
+mostra num1 " + " num2 " = " calcular num1 + num2
+mostra num1 " - " num2 " = " calcular num1 - num2
+mostra num1 " * " num2 " = " calcular num1 * num2
+mostra num1 " / " num2 " = " calcular num1 / num2
+
+mostra ""
+mostra "Como vês, podes usar a forma que preferires!"
+mostra "Português é mais fácil de ler, símbolos são mais rápidos de escrever!"

@@ -1,0 +1,93 @@
+// Exemplo avançado da linguagem Aprende
+// Jogo de adivinhação com pontuação
+
+mostra "========================================="
+mostra "    🎮 JOGO DE ADIVINHAÇÃO APRENDE 🎮"
+mostra "========================================="
+mostra ""
+
+mostra "Bem-vindo ao jogo de adivinhação!"
+mostra "Vou pensar num número entre 1 e 100."
+mostra "Tens 7 tentativas para adivinhar!"
+mostra ""
+
+// Configurações do jogo
+definir numero_secreto 42
+definir tentativas_max 7
+definir tentativas_usadas 0
+definir pontos 1000
+definir acertou falso
+
+mostra "🎯 Número escolhido! Vamos começar..."
+mostra ""
+
+// Loop principal do jogo
+enquanto tentativas_usadas menor tentativas_max
+    // Calcular tentativas restantes
+    definir restantes calcular tentativas_max menos tentativas_usadas
+    mostra "Tentativas restantes: " restantes
+    mostra "Pontos atuais: " pontos
+    mostra ""
+    
+    // Ler palpite do jogador
+    definir palpite ler "Qual é o teu palpite? "
+    definir tentativas_usadas calcular tentativas_usadas mais 1
+    
+    // Verificar se acertou
+    se palpite igual numero_secreto entao
+        mostra ""
+        mostra "🎉 PARABÉNS! ACERTASTE! 🎉"
+        mostra "O número era mesmo " numero_secreto "!"
+        mostra "Usaste " tentativas_usadas " tentativas"
+        mostra "Pontuação final: " pontos " pontos"
+        definir acertou verdadeiro
+        parar
+    senao
+        // Dar dicas
+        se palpite maior numero_secreto entao
+            mostra "❌ Muito alto! Tenta um número menor."
+        senao
+            mostra "❌ Muito baixo! Tenta um número maior."
+        
+        // Reduzir pontos
+        definir pontos calcular pontos menos 100
+        
+        // Dicas especiais baseadas na proximidade
+        definir diferenca calcular absoluto palpite menos numero_secreto
+        
+        se diferenca menor_igual 5 entao
+            mostra "🔥 MUITO QUENTE! Estás muito perto!"
+        senao
+            se diferenca menor_igual 15 entao
+                mostra "♨️ Quente! Estás perto!"
+            senao
+                se diferenca menor_igual 30 entao
+                    mostra "🌡️ Morno... podes fazer melhor!"
+                senao
+                    mostra "🧊 Frio! Estás longe!"
+        
+        mostra ""
+
+// Verificar se perdeu
+se acertou igual falso entao
+    mostra "😢 Que pena! Acabaram as tentativas."
+    mostra "O número secreto era: " numero_secreto
+    mostra "Mais sorte para a próxima vez!"
+senao
+    // Classificação baseada nas tentativas
+    se tentativas_usadas igual 1 entao
+        mostra "🏆 INCRÍVEL! Acertaste à primeira!"
+        mostra "És um génio da adivinhação!"
+    senao
+        se tentativas_usadas menor_igual 3 entao
+            mostra "🥇 EXCELENTE! Muito boa prestação!"
+        senao
+            se tentativas_usadas menor_igual 5 entao
+                mostra "🥈 BOM TRABALHO! Bem jogado!"
+            senao
+                mostra "🥉 CONSEGUISTE! Por pouco!"
+
+mostra ""
+mostra "========================================="
+mostra "       Obrigado por jogares! 🎮"
+mostra "========================================="

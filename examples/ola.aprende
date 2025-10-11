@@ -1,0 +1,26 @@
+// Exemplo de programa para crianças
+
+mostra "=== Jogo de Adivinhação ==="
+mostra "Vou pensar num número de 1 a 10"
+
+definir numero_secreto 7
+definir tentativas 0
+
+mostra "Qual é o número que estou pensando?"
+definir palpite ler
+definir tentativas calcular tentativas mais 1
+
+se palpite numero_secreto entao
+    mostra "Parabéns! Acertaste!"
+senao
+    mostra "Não foi desta vez. O número era:"
+    mostra numero_secreto
+
+mostra "Tentativas usadas:"
+mostra tentativas
+
+// Exemplo com repetições
+mostra "\n=== Tabuada do 2 ==="
+para i 1 10
+    definir resultado calcular 2 vezes i
+    mostra "2 x " i " = " resultado

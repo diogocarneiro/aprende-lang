@@ -1,0 +1,164 @@
+{
+    "Mostra texto": {
+        "prefix": "mostra",
+        "body": [
+            "mostra \"${1:texto}\""
+        ],
+        "description": "Exibe texto na tela"
+    },
+    "Ler entrada": {
+        "prefix": "ler",
+        "body": [
+            "definir ${1:variavel} ler \"${2:pergunta}\""
+        ],
+        "description": "Lê entrada do utilizador"
+    },
+    "Definir variável": {
+        "prefix": "def",
+        "body": [
+            "definir ${1:nome} ${2:valor}"
+        ],
+        "description": "Define uma variável"
+    },
+    "Estrutura Se": {
+        "prefix": "se",
+        "body": [
+            "se ${1:condicao} entao",
+            "    ${2:acao}",
+            "senao",
+            "    ${3:acao_alternativa}"
+        ],
+        "description": "Estrutura condicional se/então/senão"
+    },
+    "Loop Para": {
+        "prefix": "para",
+        "body": [
+            "para ${1:i} de ${2:1} ate ${3:10}",
+            "    ${4:acao}"
+        ],
+        "description": "Loop para de...até"
+    },
+    "Loop Enquanto": {
+        "prefix": "enquanto",
+        "body": [
+            "enquanto ${1:condicao}",
+            "    ${2:acao}"
+        ],
+        "description": "Loop enquanto"
+    },
+    "Repetir": {
+        "prefix": "repetir",
+        "body": [
+            "repetir ${1:numero} vezes",
+            "    ${2:acao}"
+        ],
+        "description": "Repete ação X vezes"
+    },
+    "Calcular": {
+        "prefix": "calc",
+        "body": [
+            "definir ${1:resultado} calcular ${2:expressao}"
+        ],
+        "description": "Calcula expressão matemática"
+    },
+    "Calcular com símbolos": {
+        "prefix": "calc+",
+        "body": [
+            "definir ${1:resultado} calcular ${2:a} + ${3:b}"
+        ],
+        "description": "Calcula usando símbolos matemáticos"
+    },
+    "Calcular com português": {
+        "prefix": "calcpt",
+        "body": [
+            "definir ${1:resultado} calcular ${2:a} mais ${3:b}"
+        ],
+        "description": "Calcula usando operadores em português"
+    },
+    "Programa básico": {
+        "prefix": "programa",
+        "body": [
+            "// ${1:Nome do programa}",
+            "// Autor: ${2:Seu nome}",
+            "",
+            "mostra \"=== ${3:Título do programa} ===\"",
+            "",
+            "${4:// Seu código aqui}",
+            "",
+            "mostra \"Programa terminado!\""
+        ],
+        "description": "Estrutura básica de um programa"
+    },
+    "Jogo simples": {
+        "prefix": "jogo",
+        "body": [
+            "// Jogo simples",
+            "mostra \"=== ${1:Nome do jogo} ===\"",
+            "",
+            "mostra \"${2:Instruções do jogo}\"",
+            "",
+            "definir ${3:variavel} ler \"${4:pergunta}\"",
+            "",
+            "se ${5:condicao} entao",
+            "    mostra \"Parabéns!\"",
+            "senao",
+            "    mostra \"Tenta novamente!\""
+        ],
+        "description": "Estrutura básica de um jogo"
+    },
+    "Comparação com símbolos": {
+        "prefix": "se>",
+        "body": [
+            "se ${1:variavel} > ${2:valor} entao",
+            "    ${3:acao}",
+            "senao",
+            "    ${4:acao_alternativa}"
+        ],
+        "description": "Condição usando símbolo >"
+    },
+    "Comparação em português": {
+        "prefix": "semaior",
+        "body": [
+            "se ${1:variavel} maior ${2:valor} entao",
+            "    ${3:acao}",
+            "senao",
+            "    ${4:acao_alternativa}"
+        ],
+        "description": "Condição usando 'maior'"
+    },
+    "Função simples": {
+        "prefix": "funcao",
+        "body": [
+            "funcao ${1:nome}(${2:parametros})",
+            "    ${3:// código da função}",
+            "    ${4:mostra \"Executando função\"}",
+            "fim"
+        ],
+        "description": "Define uma função personalizada"
+    },
+    "Função com retorno": {
+        "prefix": "funcaoret",
+        "body": [
+            "funcao ${1:nome}(${2:parametros})",
+            "    ${3:// código da função}",
+            "    definir ${4:resultado} calcular ${5:expressao}",
+            "    retorna ${4:resultado}",
+            "fim"
+        ],
+        "description": "Define uma função que retorna um valor"
+    },
+    "Chamar função": {
+        "prefix": "chamar",
+        "body": [
+            "${1:nome_funcao} ${2:argumentos}"
+        ],
+        "description": "Chama uma função definida"
+    },
+    "Retornar valor": {
+        "prefix": "retorna",
+        "body": [
+            "retorna ${1:valor}"
+        ],
+        "description": "Retorna um valor da função"
+    }
+}

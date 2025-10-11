@@ -1,0 +1,25 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\.aprende]
+@="AprendeLangFile"
+"Content Type"="text/plain"
+
+[HKEY_CLASSES_ROOT\AprendeLangFile]
+@="Ficheiro Linguagem Aprende"
+"FriendlyTypeName"="Ficheiro de código Aprende"
+
+[HKEY_CLASSES_ROOT\AprendeLangFile\DefaultIcon]
+@="C:\\Developer\\Projects\\Aprende-lang\\assets\\aprende-icon.ico"
+
+[HKEY_CLASSES_ROOT\AprendeLangFile\shell\open\command]
+@="\"C:\\Program Files\\Python313\\python.exe\" \"C:\\Developer\\Projects\\Aprende-lang\\aprende.py\" \"%1\""
+
+[HKEY_CLASSES_ROOT\AprendeLangFile\shell\edit]
+@="Editar com VS Code"
+
+[HKEY_CLASSES_ROOT\AprendeLangFile\shell\edit\command]
+@="\"C:\\Users\\%USERNAME%\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe\" \"%1\""
+
+; Associar ao VS Code se disponível
+[HKEY_CLASSES_ROOT\.aprende\OpenWithProgids]
+"vscode"=""

@@ -1,0 +1,14 @@
+// Programa simples de exemplo
+mostra "🚀 Olá mundo da Linguagem Aprende!"
+mostra "Este é o meu primeiro programa em português!"
+
+definir nome "Maria"
+definir idade 8
+
+mostra "Olá " nome "!"
+mostra "Tens " idade " anos"
+
+se idade menor 10 entao
+    mostra "És uma criança muito inteligente!"
+senao
+    mostra "Continua a aprender!"

@@ -1,0 +1,120 @@
+{
+    "name": "Aprende Dark Theme",
+    "type": "dark",
+    "colors": {
+        "editor.background": "#292D3E",
+        "editor.foreground": "#A6ACCD",
+        "editorLineNumber.foreground": "#676E95",
+        "editorLineNumber.activeForeground": "#FFCB6B",
+        "editor.selectionBackground": "#3E4451",
+        "editor.lineHighlightBackground": "#2F334D",
+        "editorCursor.foreground": "#FFCB6B",
+        "editor.findMatchBackground": "#F78C6C40",
+        "editor.findMatchHighlightBackground": "#F78C6C20",
+        "sideBar.background": "#252837",
+        "sideBar.foreground": "#A6ACCD",
+        "activityBar.background": "#1F2233",
+        "activityBar.foreground": "#A6ACCD",
+        "statusBar.background": "#1F2233",
+        "statusBar.foreground": "#A6ACCD",
+        "tab.activeBackground": "#292D3E",
+        "tab.inactiveBackground": "#252837",
+        "tab.activeForeground": "#A6ACCD",
+        "tab.inactiveForeground": "#676E95",
+        "panel.background": "#252837",
+        "terminal.background": "#292D3E",
+        "terminal.foreground": "#A6ACCD"
+    },
+    "tokenColors": [
+        {
+            "name": "Comments",
+            "scope": "comment",
+            "settings": {
+                "foreground": "#676E95",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "Keywords Control",
+            "scope": "keyword.control.aprende",
+            "settings": {
+                "foreground": "#C792EA",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Built-in functions",
+            "scope": "keyword.other.aprende",
+            "settings": {
+                "foreground": "#82AAFF",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Strings",
+            "scope": "string",
+            "settings": {
+                "foreground": "#C3E88D"
+            }
+        },
+        {
+            "name": "Numbers",
+            "scope": "constant.numeric",
+            "settings": {
+                "foreground": "#F78C6C"
+            }
+        },
+        {
+            "name": "Booleans",
+            "scope": "constant.language.boolean.aprende",
+            "settings": {
+                "foreground": "#FF5370",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Operators Arithmetic Portuguese",
+            "scope": "keyword.operator.arithmetic.aprende",
+            "settings": {
+                "foreground": "#89DDFF",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Operators Arithmetic Symbols",
+            "scope": "keyword.operator.arithmetic.symbol.aprende",
+            "settings": {
+                "foreground": "#89DDFF",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Operators Comparison Portuguese",
+            "scope": "keyword.operator.comparison.aprende",
+            "settings": {
+                "foreground": "#89DDFF"
+            }
+        },
+        {
+            "name": "Operators Comparison Symbols",
+            "scope": "keyword.operator.comparison.symbol.aprende",
+            "settings": {
+                "foreground": "#89DDFF"
+            }
+        },
+        {
+            "name": "Operators Logical",
+            "scope": "keyword.operator.logical.aprende",
+            "settings": {
+                "foreground": "#C792EA"
+            }
+        },
+        {
+            "name": "Variables",
+            "scope": "variable.other.aprende",
+            "settings": {
+                "foreground": "#EEFFFF"
+            }
+        }
+    ]
+}

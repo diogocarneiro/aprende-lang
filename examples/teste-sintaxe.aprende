@@ -1,0 +1,24 @@
+// Teste de sintaxe da linguagem Aprende
+mostra "Olá mundo!"
+
+definir nome "João"
+definir idade 25
+definir altura 1.75
+
+mostra "Nome: " nome
+mostra "Idade: " idade
+mostra "Altura: " altura
+
+se idade maior 18 entao
+    mostra "És adulto!"
+senao
+    mostra "És menor de idade!"
+
+para i de 1 ate 5
+    mostra "Contagem: " i
+
+definir soma calcular idade + 10
+definir produto calcular idade * 2
+
+mostra "Idade + 10 = " soma
+mostra "Idade * 2 = " produto

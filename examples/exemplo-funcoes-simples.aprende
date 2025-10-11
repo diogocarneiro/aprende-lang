@@ -1,0 +1,49 @@
+// Exemplo simples de funções na linguagem Aprende
+
+mostra "=== Exemplo Simples de Funções ==="
+mostra ""
+
+// Função simples sem parâmetros
+funcao saudar()
+    mostra "Olá! Esta é uma função personalizada!"
+fim
+
+// Função com um parâmetro
+funcao dizer_ola(nome)
+    mostra "Olá " nome "! Como estás?"
+fim
+
+// Função com dois parâmetros para somar
+funcao somar(a, b)
+    definir resultado calcular a + b
+    mostra a " + " b " = " resultado
+fim
+
+// Função para calcular quadrado
+funcao quadrado(numero)
+    definir resultado calcular numero * numero
+    mostra "O quadrado de " numero " é " resultado
+fim
+
+mostra "--- Chamando as funções ---"
+mostra ""
+
+// Testando as funções
+saudar
+
+mostra ""
+dizer_ola "Ana"
+dizer_ola "Pedro"
+
+mostra ""
+somar 5 3
+somar 10 7
+somar 2 8
+
+mostra ""
+quadrado 4
+quadrado 7
+quadrado 10
+
+mostra ""
+mostra "✅ Funções funcionam perfeitamente!"

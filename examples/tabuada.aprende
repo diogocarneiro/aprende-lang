@@ -1,0 +1,18 @@
+#TabuadaAprende
+
+
+mostra "🎯 Bem-vindo à Tabuada na Linguagem Aprende! 🎯"
+
+// Definir o número para a tabuada
+
+definir numero 2
+
+se i de 1 ate 10 
+
+    resultado calcular numero vezes i
+    mostra numero " x " i " = " resultado
+
+fim se
+
+    mostra "🎉 Fim da Tabuada! 🎉"
+

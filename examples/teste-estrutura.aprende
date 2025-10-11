@@ -1,0 +1,12 @@
+// Teste rápido da linguagem Aprende
+mostra "🚀 Teste da estrutura organizada!"
+mostra ""
+
+definir nome "Aprende"
+mostra "Linguagem: " nome
+
+definir resultado calcular 2 + 3
+mostra "2 + 3 = " resultado
+
+mostra ""
+mostra "✅ Estrutura do projeto organizada com sucesso!"

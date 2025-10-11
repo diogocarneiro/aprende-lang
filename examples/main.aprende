@@ -1,0 +1,8 @@
+mostra " O nosso primeiro programa em Aprende! "
+mostra " Vamos aprender a usar operadores em português e símbolos matemáticos! "
+mostra ""
+mostra " Podemos fazer cálculos simples como soma, subtração, multiplicação e divisão. "
+mostra " E o melhor: podes usar tanto palavras em português quanto os símbolos matemáticos!"
+
+esperar (10)
+mostra " Espera, deixa-me mostrar-te como funciona... "

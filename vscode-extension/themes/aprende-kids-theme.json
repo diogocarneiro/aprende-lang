@@ -1,0 +1,77 @@
+{
+    "name": "Aprende Kids Theme",
+    "type": "light",
+    "colors": {
+        "editor.background": "#FEFEFE",
+        "editor.foreground": "#2D3748",
+        "editorLineNumber.foreground": "#A0AEC0",
+        "editorLineNumber.activeForeground": "#4A5568",
+        "editor.selectionBackground": "#BEE3F8",
+        "editor.lineHighlightBackground": "#F7FAFC",
+        "editorCursor.foreground": "#3182CE",
+        "editor.findMatchBackground": "#FED7D7",
+        "editor.findMatchHighlightBackground": "#FEEBC8"
+    },
+    "tokenColors": [
+        {
+            "name": "Comments",
+            "scope": "comment",
+            "settings": {
+                "foreground": "#68D391",
+                "fontStyle": "italic"
+            }
+        },
+        {
+            "name": "Keywords",
+            "scope": "keyword.control.aprende",
+            "settings": {
+                "foreground": "#9F7AEA",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Built-in functions",
+            "scope": "keyword.other.aprende",
+            "settings": {
+                "foreground": "#3182CE",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Strings",
+            "scope": "string",
+            "settings": {
+                "foreground": "#38A169"
+            }
+        },
+        {
+            "name": "Numbers",
+            "scope": "constant.numeric",
+            "settings": {
+                "foreground": "#D69E2E"
+            }
+        },
+        {
+            "name": "Booleans",
+            "scope": "constant.language.boolean.aprende",
+            "settings": {
+                "foreground": "#E53E3E",
+                "fontStyle": "bold"
+            }
+        },
+        {
+            "name": "Operators",
+            "scope": "keyword.operator",
+            "settings": {
+                "foreground": "#805AD5"
+            }
+        },
+        {
+            "name": "Variables",
+            "scope": "variable.other.aprende",
+            "settings": {
+                "foreground": "#2D3748"
+            }
+        }
+    ]
+}
