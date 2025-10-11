@@ -1,0 +1,267 @@
+// ========================================
+// EXEMPLO COMPLETO DE SINTAXE - LINGUAGEM APRENDE
+// Demonstra todas as funcionalidades disponíveis
+// ========================================
+
+mostra "🎯 LINGUAGEM APRENDE - EXEMPLO DE SINTAXE COMPLETA 🎯"
+mostra ""
+
+// ========================================
+// 1. VARIÁVEIS E TIPOS DE DADOS
+// ========================================
+mostra "📝 1. VARIÁVEIS E TIPOS DE DADOS"
+
+definir nome "Maria"
+definir idade 12
+definir altura 1.45
+definir ativo verdadeiro
+definir nada_valor nada
+
+mostra "Nome: " nome
+mostra "Idade: " idade " anos"
+mostra "Altura: " altura " metros"
+mostra "Ativo: " ativo
+mostra "Valor nulo: " nada_valor
+mostra ""
+
+// ========================================
+// 2. OPERADORES MATEMÁTICOS (DUPLOS)
+// ========================================
+mostra "🔢 2. OPERADORES MATEMÁTICOS"
+
+definir a 10
+definir b 3
+
+// Operadores em português
+mostra "=== Em português ==="
+definir soma calcular a mais b
+definir subtracao calcular a menos b
+definir multiplicacao calcular a vezes b
+definir divisao calcular a dividido b
+
+mostra a " mais " b " = " soma
+mostra a " menos " b " = " subtracao
+mostra a " vezes " b " = " multiplicacao
+mostra a " dividido " b " = " divisao
+
+// Operadores com símbolos
+mostra "=== Com símbolos ==="
+definir soma2 calcular a + b
+definir subtracao2 calcular a - b
+definir multiplicacao2 calcular a * b
+definir divisao2 calcular a / b
+
+mostra a " + " b " = " soma2
+mostra a " - " b " = " subtracao2
+mostra a " * " b " = " multiplicacao2
+mostra a " / " b " = " divisao2
+mostra ""
+
+// ========================================
+// 3. OPERADORES DE COMPARAÇÃO
+// ========================================
+mostra "⚖️ 3. OPERADORES DE COMPARAÇÃO"
+
+definir x 5
+definir y 8
+
+mostra "x = " x ", y = " y
+
+// Em português
+se x igual y entao
+    mostra "x é igual a y"
+senao
+    mostra "x não é igual a y"
+
+se x maior y entao
+    mostra "x é maior que y"
+senao
+    mostra "x não é maior que y"
+
+se x menor y entao
+    mostra "x é menor que y"
+senao
+    mostra "x não é menor que y"
+
+// Com símbolos
+se x == y entao
+    mostra "x == y (verdadeiro)"
+senao
+    mostra "x == y (falso)"
+
+se x < y entao
+    mostra "x < y (verdadeiro)"
+senao
+    mostra "x < y (falso)"
+
+mostra ""
+
+// ========================================
+// 4. ESTRUTURAS CONDICIONAIS
+// ========================================
+mostra "🔀 4. ESTRUTURAS CONDICIONAIS"
+
+definir nota 85
+
+se nota maior_igual 90 entao
+    mostra "Excelente! Nota A"
+senao
+    se nota maior_igual 80 entao
+        mostra "Muito bom! Nota B"
+    senao
+        se nota maior_igual 70 entao
+            mostra "Bom! Nota C"
+        senao
+            mostra "Precisa melhorar!"
+
+mostra ""
+
+// ========================================
+// 5. LOOPS - PARA
+// ========================================
+mostra "🔄 5. LOOP PARA"
+
+mostra "Contando de 1 a 5:"
+para i de 1 ate 5
+    mostra "  " i
+
+mostra "Tabuada do 3:"
+para num de 1 ate 10
+    definir resultado calcular 3 * num
+    mostra "  3 x " num " = " resultado
+
+mostra ""
+
+// ========================================
+// 6. LOOPS - ENQUANTO
+// ========================================
+mostra "⭕ 6. LOOP ENQUANTO"
+
+definir contador 1
+mostra "Contando enquanto menor que 4:"
+enquanto contador menor 4
+    mostra "  Contador: " contador
+    definir contador calcular contador + 1
+
+mostra ""
+
+// ========================================
+// 7. LOOPS ANINHADOS
+// ========================================
+mostra "🔄🔄 7. LOOPS ANINHADOS"
+
+mostra "Tabela 2x2:"
+definir linha 1
+enquanto linha menor_igual 2
+    definir coluna 1
+    enquanto coluna menor_igual 2
+        mostra "  [" linha "," coluna "]"
+        definir coluna calcular coluna + 1
+    definir linha calcular linha + 1
+
+mostra ""
+
+// ========================================
+// 8. FUNÇÕES DEFINIDAS PELO USUÁRIO
+// ========================================
+mostra "🔧 8. FUNÇÕES"
+
+// Definir uma função simples
+funcao saudacao
+    mostra "  Olá da função!"
+fim
+
+// Definir função com parâmetros
+funcao cumprimentar nome_pessoa
+    mostra "  Olá, " nome_pessoa "!"
+fim
+
+// Definir função com cálculo
+funcao quadrado numero
+    definir resultado calcular numero * numero
+    mostra "  O quadrado de " numero " é " resultado
+    retorna resultado
+fim
+
+// Usar as funções
+mostra "Chamando funções:"
+saudacao
+cumprimentar "João"
+quadrado 7
+
+mostra ""
+
+// ========================================
+// 9. ENTRADA DO USUÁRIO (COMENTADO)
+// ========================================
+mostra "⌨️ 9. ENTRADA DO USUÁRIO"
+mostra "// Para testar entrada, descomente as linhas abaixo:"
+mostra "// definir seu_nome ler \"Como te chamas? \""
+mostra "// mostra \"Olá, \" seu_nome \"!\""
+mostra "// definir sua_idade ler \"Quantos anos tens? \""
+mostra "// mostra \"Tens \" sua_idade \" anos.\""
+
+// Descomente para testar:
+// definir seu_nome ler "Como te chamas? "
+// mostra "Olá, " seu_nome "!"
+// definir sua_idade ler "Quantos anos tens? "
+// mostra "Tens " sua_idade " anos."
+
+mostra ""
+
+// ========================================
+// 10. EXEMPLO PRÁTICO - JOGO SIMPLES
+// ========================================
+mostra "🎮 10. EXEMPLO PRÁTICO"
+
+definir numero_secreto 7
+definir tentativas 0
+definir max_tentativas 3
+
+mostra "=== JOGO DE ADIVINHAÇÃO (SIMULADO) ==="
+mostra "Número secreto: " numero_secreto " (normalmente escondido)"
+
+// Simular algumas tentativas
+definir palpite1 5
+definir tentativas calcular tentativas + 1
+mostra "Tentativa " tentativas ": " palpite1
+se palpite1 igual numero_secreto entao
+    mostra "🎉 Parabéns! Acertaste!"
+senao
+    se palpite1 menor numero_secreto entao
+        mostra "📈 Muito baixo! Tenta um número maior."
+    senao
+        mostra "📉 Muito alto! Tenta um número menor."
+
+definir palpite2 8
+definir tentativas calcular tentativas + 1
+mostra "Tentativa " tentativas ": " palpite2
+se palpite2 igual numero_secreto entao
+    mostra "🎉 Parabéns! Acertaste!"
+senao
+    se palpite2 menor numero_secreto entao
+        mostra "📈 Muito baixo! Tenta um número maior."
+    senao
+        mostra "📉 Muito alto! Tenta um número menor."
+
+definir palpite3 7
+definir tentativas calcular tentativas + 1
+mostra "Tentativa " tentativas ": " palpite3
+se palpite3 igual numero_secreto entao
+    mostra "🎉 Parabéns! Acertaste em " tentativas " tentativas!"
+senao
+    mostra "😞 Fim do jogo! O número era " numero_secreto
+
+mostra ""
+
+// ========================================
+// FINAL
+// ========================================
+mostra "✅ EXEMPLO DE SINTAXE COMPLETO!"
+mostra "🎯 Linguagem Aprende - Programação em português para todos!"
+mostra ""
+mostra "Para executar este ficheiro:"
+mostra "  python aprende.py sintaxe.aprende"
+mostra ""
+mostra "Para modo interativo:"
+mostra "  python aprende.py -i"
