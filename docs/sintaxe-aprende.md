@@ -9,9 +9,9 @@
 - `calcular` - Realiza cálculos matemáticos
 
 ### Estruturas de Controlo
-- `se` ... `entao` ... `senao` - Estrutura condicional
+- `se` ... `entao` ... `senao` - Estrutura condicional (suporta blocos aninhados)
 - `para` ... `de` ... `ate` - Loop for
-- `enquanto` - Loop while
+- `enquanto` - Loop while (pode conter outros comandos aninhados)
 - `repetir` ... `vezes` - Repete uma ação X vezes
 
 ### Operadores Matemáticos (duas formas de usar)
@@ -103,11 +103,24 @@ para i de 1 ate 5
 repetir 3 vezes
     mostra "Olá mundo!"
 
-// Loop enquanto
+// Loop enquanto com condicional aninhado
 definir contador 0
 enquanto contador menor 5
-    mostra "Contador: " contador
+    se contador igual 2 entao
+        mostra "Metade do caminho!"
+    senao
+        mostra "Contador: " contador
     definir contador calcular contador mais 1
+
+// Estruturas aninhadas
+para linha de 1 ate 2
+    definir coluna 1
+    enquanto coluna menor_igual 2
+        se coluna igual 2 entao
+            mostra "Linha " linha " - coluna final"
+        senao
+            mostra "Linha " linha " - coluna inicial"
+        definir coluna calcular coluna + 1
 ```
 
 ## Tipos de Dados

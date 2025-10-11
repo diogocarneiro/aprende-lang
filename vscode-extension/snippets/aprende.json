@@ -129,23 +129,25 @@
     "Função simples": {
         "prefix": "funcao",
         "body": [
-            "funcao ${1:nome}(${2:parametros})",
-            "    ${3:// código da função}",
-            "    ${4:mostra \"Executando função\"}",
+            "// Função: ${1:descrição curta}",
+            "funcao ${2:nome}(${3:parametros})",
+            "    ${4:// passos da função}",
+            "    ${5:mostra \"Executando função\"}",
             "fim"
         ],
-        "description": "Define uma função personalizada"
+        "description": "Estrutura base de função com comentário auxiliar"
     },
     "Função com retorno": {
         "prefix": "funcaoret",
         "body": [
-            "funcao ${1:nome}(${2:parametros})",
-            "    ${3:// código da função}",
-            "    definir ${4:resultado} calcular ${5:expressao}",
-            "    retorna ${4:resultado}",
+            "// Função: ${1:descrição curta}",
+            "funcao ${2:nome}(${3:parametros})",
+            "    ${4:// validar dados ou preparar cálculo}",
+            "    definir ${5:resultado} calcular ${6:expressao}",
+            "    retorna ${5:resultado}",
             "fim"
         ],
-        "description": "Define uma função que retorna um valor"
+        "description": "Função com retorno e lembrete do bloco"
     },
     "Chamar função": {
         "prefix": "chamar",

@@ -68,7 +68,8 @@ python aprende.py examples/meu_programa.aprende
 - `calcular` - Fazer cálculos
 - `ler` - Ler entrada do utilizador
 - `se/entao/senao` - Condições
-- `para/de/ate` - Loops
+- `para/de/ate` - Loops contados
+- `enquanto` - Loops condicionais com blocos aninhados
 - `funcao` - Criar funções
 
 ### ⚡ **Operadores Duplos**
@@ -80,6 +81,18 @@ definir produto calcular 4 vezes 2
 // Com símbolos (mais rápido)
 definir soma calcular 5 + 3  
 definir produto calcular 4 * 2
+```
+
+### 🧠 **Estruturas de Controlo Aninhadas**
+```aprende
+definir linhas 0
+enquanto linhas menor 2
+    para colunas de 1 ate 2
+        se colunas igual 2 entao
+            mostra "linha " linhas " coluna final"
+        senao
+            mostra "linha " linhas " coluna inicial"
+    definir linhas calcular linhas + 1
 ```
 
 ---
@@ -203,6 +216,9 @@ python src/cli.py -i
 
 ### 🧪 Testes
 ```bash
+# Testes automatizados (loops e condicionais aninhadas)
+python -m unittest discover -s tests
+
 # Testar exemplos
 python aprende.py examples/teste-estrutura.aprende
 

@@ -8,6 +8,7 @@ def mostra(*args):
         print(' '.join(str(arg) for arg in args))
     else:
         print()
+        
 
 class InterpretadorAprende:
     def __init__(self):
@@ -70,6 +71,12 @@ class InterpretadorAprende:
                 valor = self._ler()
             elif valor.startswith('ler '):
                 valor = self._ler(valor[4:])
+            elif valor == 'verdadeiro':
+                valor = True
+            elif valor == 'falso':
+                valor = False
+            elif valor == 'nada':
+                valor = None
             else:
                 # Tenta converter para número
                 try:
@@ -156,7 +163,31 @@ class InterpretadorAprende:
         if isinstance(linhas, str):
             linhas = [linhas]
         for linha in linhas:
-            self.executar_linha(linha)
+            self._executar_item(linha)
+
+    def _executar_item(self, item):
+        """Executa uma linha simples ou uma estrutura de controlo"""
+        if isinstance(item, list):
+            self.executar_estrutura_controle(item)
+        else:
+            self.executar_linha(item)
+
+    def _linha_tem_bloco(self, linhas, indice):
+        """Verifica se a linha de controlo possui bloco indentado"""
+        j = indice + 1
+        while j < len(linhas):
+            linha = linhas[j].rstrip()
+            texto = linha.strip()
+            if not texto or texto.startswith('//'):
+                j += 1
+                continue
+            return linha.startswith((' ', '\t')) or texto.startswith('senao')
+        return False
+
+    def _nivel_indentacao(self, linha):
+        """Calcula o número de espaços de indentação de uma linha"""
+        expandida = linha.replace('\t', '    ')
+        return len(expandida) - len(expandida.lstrip(' '))
     
     def _repetir(self, vezes, acao):
         """Repete uma ação X vezes"""
@@ -202,6 +233,9 @@ class InterpretadorAprende:
         resultado = None
         try:
             for linha in corpo:
+                if isinstance(linha, list):
+                    self.executar_estrutura_controle(linha)
+                    continue
                 if linha.strip().startswith('retorna '):
                     # Comando retorna
                     valor = linha.strip()[8:].strip()
@@ -399,6 +433,28 @@ class InterpretadorAprende:
             else:
                 valor = self._ler()
         else:
+            argumentos = self.dividir_argumentos(valor_str)
+            if argumentos:
+                primeiro = argumentos[0]
+                if primeiro in self.funcoes_usuario:
+                    # Remove o nome e processa argumentos como numa chamada normal
+                    args_processados = []
+                    for arg in argumentos[1:]:
+                        if arg.startswith('"') and arg.endswith('"'):
+                            args_processados.append(arg[1:-1])
+                        elif arg.startswith("'") and arg.endswith("'"):
+                            args_processados.append(arg[1:-1])
+                        elif arg in self.variaveis:
+                            args_processados.append(self.variaveis[arg])
+                        else:
+                            try:
+                                args_processados.append(self._calcular(arg))
+                            except Exception:
+                                args_processados.append(arg)
+                    valor = self.chamar_funcao(primeiro, args_processados)
+                    self._definir(nome, valor)
+                    return
+
             valor = valor_str
         
         self._definir(nome, valor)
@@ -515,7 +571,8 @@ class InterpretadorAprende:
                 
                 try:
                     # Verifica se é uma estrutura de controle
-                    if linha.strip().startswith(('se ', 'para ', 'enquanto ', 'funcao ')):
+                    linha_limpa = linha.strip()
+                    if linha_limpa.startswith(('se ', 'para ', 'enquanto ', 'funcao ')) and self._linha_tem_bloco(linhas, i):
                         bloco, proxima_linha = self.processar_bloco_indentado(linhas, i)
                         self.executar_estrutura_controle(bloco)
                         i = proxima_linha
@@ -534,37 +591,64 @@ class InterpretadorAprende:
         """Processa um bloco indentado (se/para/enquanto)"""
         linha_controle = linhas[inicio].strip()
         bloco = [linha_controle]
-        
+        indent_base = self._nivel_indentacao(linhas[inicio])
+
         i = inicio + 1
         while i < len(linhas):
             linha = linhas[i].rstrip()
-            if linha.strip() == "":
+            texto = linha.strip()
+
+            if not texto or texto.startswith('//'):
                 i += 1
                 continue
-            if linha.startswith("    ") or linha.startswith("\t"):
-                # Linha indentada, faz parte do bloco
-                bloco.append(linha.strip())
-            elif linha.strip().startswith("senao"):
-                # Linha senao
-                bloco.append(linha.strip())
-                # Procura linhas indentadas após senao
-                i += 1
-                while i < len(linhas):
-                    linha_senao = linhas[i].rstrip()
-                    if linha_senao.strip() == "":
-                        i += 1
-                        continue
-                    if linha_senao.startswith("    ") or linha_senao.startswith("\t"):
-                        bloco.append(linha_senao.strip())
-                        i += 1
-                    else:
+
+            indent_linha = self._nivel_indentacao(linhas[i])
+
+            if indent_linha <= indent_base:
+                if texto == 'fim' and linha_controle.startswith('funcao '):
+                    bloco.append('fim')
+                    i += 1
+                    break
+
+                if texto.startswith('senao') and indent_linha == indent_base:
+                    bloco.append(texto)
+                    i += 1
+
+                    while i < len(linhas):
+                        linha_senao = linhas[i].rstrip()
+                        texto_senao = linha_senao.strip()
+
+                        if not texto_senao or texto_senao.startswith('//'):
+                            i += 1
+                            continue
+
+                        indent_senao = self._nivel_indentacao(linhas[i])
+                        if indent_senao > indent_base:
+                            if texto_senao.startswith(('se ', 'para ', 'enquanto ', 'funcao ')):
+                                sub_bloco, proxima = self.processar_bloco_indentado(linhas, i)
+                                bloco.append(sub_bloco)
+                                i = proxima
+                                continue
+                            bloco.append(texto_senao)
+                            i += 1
+                            continue
                         break
+                    continue
                 break
-            else:
-                # Linha não indentada, fim do bloco
-                break
-            i += 1
-        
+
+            if texto.startswith(('se ', 'para ', 'enquanto ', 'funcao ')) and indent_linha > indent_base:
+                sub_bloco, proxima = self.processar_bloco_indentado(linhas, i)
+                bloco.append(sub_bloco)
+                i = proxima
+                continue
+
+            if indent_linha > indent_base:
+                bloco.append(texto)
+                i += 1
+                continue
+
+            break
+
         return bloco, i
     
     def executar_estrutura_controle(self, bloco):
@@ -586,13 +670,18 @@ class InterpretadorAprende:
         # Encontra senao se existir
         idx_senao = -1
         for i, cmd in enumerate(comandos):
-            if cmd.startswith('senao'):
+            if isinstance(cmd, str) and cmd.startswith('senao'):
                 idx_senao = i
                 break
         
         if idx_senao >= 0:
             comandos_entao = comandos[:idx_senao]
             comandos_senao = comandos[idx_senao+1:]
+            cabecalho_senao = comandos[idx_senao]
+            if isinstance(cabecalho_senao, str):
+                resto = cabecalho_senao[5:].strip()
+                if resto:
+                    comandos_senao = [resto] + comandos_senao
         else:
             comandos_entao = comandos
             comandos_senao = []
@@ -606,10 +695,10 @@ class InterpretadorAprende:
         # Executa condição
         if self._calcular(condicao):
             for cmd in comandos_entao:
-                self.executar_linha(cmd)
+                self._executar_item(cmd)
         elif comandos_senao:
             for cmd in comandos_senao:
-                self.executar_linha(cmd)
+                self._executar_item(cmd)
     
     def processar_para_bloco(self, linha_para, comandos):
         """Processa para/de/ate com bloco"""
@@ -623,7 +712,7 @@ class InterpretadorAprende:
             for i in range(int(inicio), int(fim) + 1):
                 self.variaveis[variavel] = i
                 for cmd in comandos:
-                    self.executar_linha(cmd)
+                    self._executar_item(cmd)
     
     def processar_enquanto_bloco(self, linha_enquanto, comandos):
         """Processa enquanto com bloco"""
@@ -631,7 +720,7 @@ class InterpretadorAprende:
         
         while self._calcular(condicao):
             for cmd in comandos:
-                self.executar_linha(cmd)
+                self._executar_item(cmd)
     
     def processar_funcao_bloco(self, linha_funcao, comandos):
         """Processa definição de função com bloco"""
@@ -649,9 +738,12 @@ class InterpretadorAprende:
         if params_str:
             parametros = [p.strip() for p in params_str.split(',') if p.strip()]
         
-        # Remove comando 'fim' se existir
-        if comandos and comandos[-1].strip() == 'fim':
-            comandos = comandos[:-1]
+        # Garante que a função termina com 'fim'
+        if not (comandos and comandos[-1] == 'fim'):
+            raise Exception(f"Função '{nome_funcao}' precisa terminar com 'fim'")
+
+        # Remove comando 'fim'
+        comandos = comandos[:-1]
         
         # Define a função
         self.funcoes_usuario[nome_funcao] = {
@@ -659,7 +751,7 @@ class InterpretadorAprende:
             'corpo': comandos
         }
         
-        mostra(f"Função '{nome_funcao}' definida com sucesso!")
+        # mostra(f"Função '{nome_funcao}' definida com sucesso!")
 
 # Exemplo de uso
 if __name__ == "__main__":

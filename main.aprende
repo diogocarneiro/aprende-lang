@@ -1,0 +1,240 @@
+// 🧮 Calculadora Aprende com Emojis - Versão Divertida 🎉
+
+mostra "🎯=========================================🎯"
+mostra "   🧮 CALCULADORA APRENDE COM EMOJIS 🧮   "
+mostra "🎯=========================================🎯"
+mostra ""
+
+// Mostra o menu de operações com emojis
+funcao mostrar_menu()
+    mostra "🌟 Escolha uma operação divertida:"
+    mostra " 1️⃣ ➕ Somar - Juntar números"
+    mostra " 2️⃣ ➖ Subtrair - Tirar números"
+    mostra " 3️⃣ ✖️ Multiplicar - Repetir somas"
+    mostra " 4️⃣ ➗ Dividir - Repartir números"
+    mostra " 5️⃣ 🔢 Potência - Elevar números"
+    mostra " 6️⃣ 📊 Percentagem - Calcular %"
+    mostra " 7️⃣ 🧠 Raiz quadrada - Descobrir raiz"
+    mostra " 0️⃣ ❌ Sair - Terminar programa"
+    mostra ""
+fim
+
+// Opera: soma com emojis divertidos
+funcao executar_soma()
+    mostra "➕ OPERAÇÃO: SOMA DIVERTIDA ➕"
+    mostra "🎈 Vamos juntar números como balões!"
+    mostra ""
+    
+    mostra "🔢 Digite o primeiro número: "
+    definir a ler
+    mostra "🔢 Digite o segundo número: "
+    definir b ler
+    definir resultado calcular a + b
+    
+    mostra ""
+    mostra "🎉 RESULTADO DA SOMA:"
+    mostra "   " a " ➕ " b " = " resultado
+    mostra "✨ Fantástico! Os números juntaram-se perfeitamente! ✨"
+fim
+
+// Opera: subtração com tema de piratas
+funcao executar_subtracao()
+    mostra "➖ OPERAÇÃO: SUBTRAÇÃO DOS PIRATAS ➖"
+    
+    mostra "🏴‍☠️ Vamos roubar alguns números!"
+    mostra ""
+    
+    mostra "💰 Digite o tesouro inicial: "
+    definir a ler
+    mostra "⚔️ Digite quanto foi roubado: "
+    definir b ler
+    definir resultado calcular a - b
+    
+    mostra ""
+    mostra "🏴‍☠️ RESULTADO DA SUBTRAÇÃO:"
+    mostra "   " a " ➖ " b " = " resultado
+    mostra "🗝️ Arrr! Ainda restam " resultado " moedas no tesouro! 🗝️"
+fim
+
+// Opera: multiplicação com tema espacial
+funcao executar_multiplicacao()
+    mostra "✖️ OPERAÇÃO: MULTIPLICAÇÃO ESPACIAL ✖️"
+    mostra "🚀 Vamos multiplicar como foguetes!"
+    mostra ""
+    
+    mostra "🌟 Digite o primeiro número estelar: "
+    definir a ler
+    mostra "🌌 Digite o multiplicador cósmico: "
+    definir b ler
+    definir resultado calcular a * b
+    
+    mostra ""
+    mostra "🚀 RESULTADO DA MULTIPLICAÇÃO:"
+    mostra "   " a " ✖️ " b " = " resultado
+    mostra "🌌 Uau! Os números multiplicaram-se pelo universo! 🌌"
+fim
+
+// Opera: divisão com tema de pizza
+funcao executar_divisao()
+    mostra "➗ OPERAÇÃO: DIVISÃO DA PIZZA ➗"
+    mostra "🍕 Vamos repartir pizza igualmente!"
+    mostra ""
+    
+    mostra "🍕 Digite quantas fatias de pizza tens: "
+    definir a ler
+    mostra "👥 Digite quantos amigos vão comer: "
+    definir b ler
+    
+    se b igual 0 entao
+        mostra "😱 Não há amigos? Comes tudo sozinho! 🤤"
+        mostra "🚫 (Não é possível dividir por zero!)"
+    senao
+        definir resultado calcular a / b
+        mostra ""
+        mostra "🍕 RESULTADO DA DIVISÃO:"
+        mostra "   " a " ➗ " b " = " resultado
+        mostra "😋 Cada amigo recebe " resultado " fatias de pizza! 😋"
+fim
+
+// Opera: potência com tema de super-heróis
+funcao executar_potencia()
+    mostra "🔢 OPERAÇÃO: POTÊNCIA SUPER-HEROICA 🔢"
+    mostra "🦸‍♂️ Vamos dar super poderes aos números!"
+    mostra ""
+    
+    mostra "⚡ Digite o número herói: "
+    definir base ler
+    mostra "💪 Digite quantos poderes dar: "
+    definir expoente ler
+    definir resultado 1
+    
+    se expoente menor 0 entao
+        mostra "😅 Super-heróis não têm poderes negativos!"
+    senao
+        para i de 1 ate expoente
+            definir resultado calcular resultado * base
+        
+        mostra ""
+        mostra "🦸‍♂️ RESULTADO DA POTÊNCIA:"
+        mostra "   " base "^" expoente " = " resultado
+        mostra "💥 BOOM! O número ganhou super poderes! 💥"
+fim
+
+// Opera: percentagem com tema de doces
+funcao executar_percentagem()
+    mostra "📊 OPERAÇÃO: PERCENTAGEM DOS DOCES 📊"
+    mostra "🍭 Vamos calcular quantos doces receber!"
+    mostra ""
+    
+    mostra "🍬 Digite quantos doces tens no total: "
+    definir valor ler
+    mostra "🎂 Digite que % queres comer: "
+    definir percentual ler
+    definir resultado calcular valor * percentual / 100
+    
+    mostra ""
+    mostra "🍭 RESULTADO DA PERCENTAGEM:"
+    mostra "   " percentual "% de " valor " = " resultado " doces"
+    mostra "🤤 Podes comer " resultado " doces deliciosos! 🤤"
+fim
+
+// Opera: raiz quadrada com tema de jardim
+funcao executar_raiz()
+    mostra "🧠 OPERAÇÃO: RAIZ QUADRADA MÁGICA 🧠"
+    mostra "🌱 Vamos descobrir a raiz dos números!"
+    mostra ""
+    
+    mostra "🌳 Digite um número para descobrir sua raiz: "
+    definir numero ler
+    
+    se numero menor 0 entao
+        mostra "🙃 Números negativos não têm raiz real!"
+        mostra "🌱 Planta um número positivo! 🌱"
+    senao
+        // Calcula raiz quadrada aproximada
+        definir raiz 1
+        definir tentativas 0
+        
+        enquanto tentativas menor 10
+            definir novo_raiz calcular (raiz + numero / raiz) / 2
+            definir raiz novo_raiz
+            definir tentativas calcular tentativas + 1
+        
+        mostra ""
+        mostra "🌱 RESULTADO DA RAIZ QUADRADA:"
+        mostra "   √" numero " ≈ " raiz
+        mostra "🌳 A raiz cresceu e floresceu! 🌳"
+fim
+
+// Pergunta se quer continuar com emojis
+funcao perguntar_continuar()
+    definir resposta ler "🤔 Queres fazer mais contas divertidas? (s/n): "
+    se resposta igual "s" entao
+        retorna verdadeiro
+    senao
+        se resposta igual "S" entao
+            retorna verdadeiro
+        senao
+            retorna falso
+fim
+
+// Loop principal da calculadora com emojis
+mostra "🎊 Bem-vindo à calculadora mais divertida do mundo! 🎊"
+mostra ""
+
+definir continuar verdadeiro
+
+enquanto continuar igual verdadeiro
+    mostra ""
+    mostrar_menu
+    definir opcao ler "🎯 Escolhe tua aventura matemática (0-7): "
+
+    se opcao igual 0 entao
+        mostra "👋 A sair da calculadora..."
+        mostra "🎈 Até à próxima aventura matemática! 🎈"
+        definir continuar falso
+    senao
+        definir operacao_valida falso
+
+        se opcao igual 1 entao
+            executar_soma
+            definir operacao_valida verdadeiro
+        senao
+            se opcao igual 2 entao
+                executar_subtracao
+                definir operacao_valida verdadeiro
+            senao
+                se opcao igual 3 entao
+                    executar_multiplicacao
+                    definir operacao_valida verdadeiro
+                senao
+                    se opcao igual 4 entao
+                        executar_divisao
+                        definir operacao_valida verdadeiro
+                    senao
+                        se opcao igual 5 entao
+                            executar_potencia
+                            definir operacao_valida verdadeiro
+                        senao
+                            se opcao igual 6 entao
+                                executar_percentagem
+                                definir operacao_valida verdadeiro
+                            senao
+                                se opcao igual 7 entao
+                                    executar_raiz
+                                    definir operacao_valida verdadeiro
+                                senao
+                                    mostra "🤷‍♀️ Opção inválida! Escolhe um número entre 0 e 7! 🤷‍♂️"
+
+        se operacao_valida igual verdadeiro entao
+            definir continuar perguntar_continuar
+        senao
+            definir continuar verdadeiro
+fim
+
+mostra ""
+mostra "🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉"
+mostra "🌟 Obrigado por usares a Calculadora Emoji! 🌟"
+mostra "🎓 Espero que te tenhas divertido a aprender! 🎓"
+mostra "🚀 A matemática é uma aventura incrível! 🚀"
+mostra "🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉🎉"

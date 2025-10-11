@@ -2,7 +2,7 @@
     "name": "aprende-lang",
     "displayName": "Aprende Language Support",
     "description": "Suporte completo para a linguagem de programação Aprende - Uma linguagem em português para crianças e iniciantes aprenderem programação de forma intuitiva",
-    "version": "1.1.1",
+    "version": "1.1.2",
     "publisher": "diogocarneiro",
     "author": {
         "name": "Diogo Carneiro",
@@ -38,6 +38,10 @@
         "color": "#2E7D32",
         "theme": "dark"
     },
+    "main": "./extension.js",
+    "activationEvents": [
+        "onLanguage:aprende"
+    ],
     "contributes": {
         "languages": [
             {
