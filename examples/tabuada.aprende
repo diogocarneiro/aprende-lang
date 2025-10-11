@@ -1,18 +1,20 @@
-#TabuadaAprende
-
+// Tabuada na Linguagem Aprende
+// Exemplo de loop e cálculos matemáticos
 
 mostra "🎯 Bem-vindo à Tabuada na Linguagem Aprende! 🎯"
+mostra ""
 
 // Definir o número para a tabuada
-
 definir numero 2
 
-se i de 1 ate 10 
+mostra "📚 Tabuada do " numero ":"
+mostra "========================"
 
-    resultado calcular numero vezes i
+// Loop para calcular e mostrar a tabuada
+para i de 1 ate 10
+    definir resultado calcular numero * i
     mostra numero " x " i " = " resultado
 
-fim se
-
-    mostra "🎉 Fim da Tabuada! 🎉"
+mostra ""
+mostra "🎉 Fim da Tabuada! 🎉"
 
