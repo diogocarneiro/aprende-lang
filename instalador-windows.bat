@@ -38,7 +38,7 @@ echo.
 echo            👨 Autor:    Diogo Carneiro
 echo            📧 Email:    diogocarneiro@outlook.com
 echo            🐱 GitHub:   https://github.com/diogocarneiro
-echo            🐦 Twitter:  https://twitter.com/diogocarneiro
+echo            🐦 Twitter:  https://twitter.com/diogoncarneiro
 echo.
 echo            📦 Projeto:  Aprende-lang
 echo            📅 Versão:   1.1.2
